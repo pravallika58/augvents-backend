@@ -14,4 +14,7 @@ module.exports = function (app) {
   app.use("/api", ratingRouter);
   app.use("/api", feedbackRouter);
   app.use("/api", artistRouter);
+  app.use("/", (req, res) => {
+    res.send("Welcome to the API");
+  });
 };
